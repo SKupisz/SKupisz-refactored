@@ -8,6 +8,8 @@ import { WelcomeSection, WelcomeSectionFilter, WelcomeSectionHeader,
 
 import Saturn from "../../assets/saturn.jpg";
 
+import data from "../../data/general.js";
+
 const useWindowSize = () => {
     const [size, setSize] = useState(0);
     useLayoutEffect(() => {
@@ -23,24 +25,7 @@ const useWindowSize = () => {
 const Welcome = () => {
 
     const headerContent = "Who am I?";
-    const MenuItems = [
-        {
-            address: "/",
-            content: "Main"
-        },
-        {
-            address: "/portfolio",
-            content: "Portfolio"
-        },
-        {
-            address: "/blog",
-            content: "Blog"
-        },
-        {
-            address: "/contact",
-            content: "Contact"
-        },
-    ]
+    const MenuItems = data["mainNavbar"]
 
     const [currentDescWidth, setCurrentDescWidth] = useState(0);
     const [currentMenuOpacity, setCurrentMenuOpacity] = useState(0);

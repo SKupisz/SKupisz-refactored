@@ -166,6 +166,10 @@ body{
   animation-delay: 0.4s;
 }
 
+.contact-icon{
+  font-size: 5em !important;
+}
+
 @media screen and (min-width: 320px) {
   .fallback-header{
     font-size: 2.2em;
