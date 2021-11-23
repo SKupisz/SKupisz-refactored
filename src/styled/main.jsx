@@ -6,11 +6,12 @@ export const MainContainer = styled.main`
     text-align: center;
     padding-bottom: 10px;
     height: fit-content;
+    min-height: 70vh;
     overflow-x: hidden;
     ${(props) => 
         props.iswithmainmenu==="true" ? `
         position: relative;
-        top: 13vh;
+        top: 19vh;
         `: ""}
 `;
 
@@ -18,7 +19,7 @@ export const GeneralNavbar = styled(a.nav)`
     width: calc(100% - 10px);
     padding: 0px 5px;
     height: ${(props) => 
-        props.opened === "true" ? "100vh" : "10vh"};
+        props.opened === "true" ? "100vh" : "13vh"};
     margin-bottom: 10vh;
     position: relative;
     top: 1vh;
@@ -37,7 +38,7 @@ export const GeneralNavbar = styled(a.nav)`
     }
 
     @media screen and (min-width: 768px){
-        height: 10vh;
+        height: 13vh;
     }
 
     @media screen and (min-width: 1024px){
@@ -109,7 +110,6 @@ export const GeneralNavbarIcon = styled.div`
     position: absolute;
     right: 10px;
     top: 10px;
-    font-size: 1.1em;
     text-align: center;
     color: rgba(240,240,240,.9);
 
