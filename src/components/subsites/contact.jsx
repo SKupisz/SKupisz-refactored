@@ -6,6 +6,8 @@ import { ContactHeader, ContactList,
 
 import data from "../../data/general.js";
 
+import Navbar from "../navbar.jsx";
+
 const Contact = () => {
 
     const [currentLeftPos, setCurrentLeftPos] = useState(100);
@@ -14,7 +16,9 @@ const Contact = () => {
         setTimeout(() => setCurrentLeftPos(0), 200);
     });
 
-    return <MainContainer className="block-center">
+    return <>
+        <Navbar/>
+        <MainContainer className="block-center" iswithmainmenu="true">
         <ContactHeader className="block-center"
         left = {String(currentLeftPos)+"%"}>
             Contact
@@ -24,12 +28,12 @@ const Contact = () => {
             {data["contactWays"].map((elem, ind) => elem["address"] === null ? <ContactWayContainer key={"contact-way-"+ind} className="block-center">
                 {elem["icon"]}
             </ContactWayContainer> : <a href = {elem["address"]} key = {"contact-way-"+ind} target="blank">
-            <ContactWayContainer key={"contact-way-"+ind} className="block-center" islink>
+            <ContactWayContainer key={"contact-way-"+ind} className="block-center" islink="">
                 {elem["icon"]}
             </ContactWayContainer>
             </a>)}
         </ContactList>
-    </MainContainer>
+    </MainContainer></>
 };
 
 export default Contact;
