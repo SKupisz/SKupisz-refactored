@@ -45,16 +45,52 @@ const data = {
             ["show --projects", "Shows the projects I built"],
             ["show --skills", "Shows my abilities in programming"],
             ["clear", "Clears the console"],
-            ["chfz -b -m -l","Changes console's font size to bigger (-b), medium (-m) or lower (-l)"],
-            ["chcc {color} --reset","Changes console text's color to the hex code or the RGB given or resets is with --reset. To know more colors, type chcc -list"],
+            ["chfz -b -n -s --reset","Changes console's font size to big (-b), normal (-n), small (-s) or reset the size with the --reset flag"],
+            ["chcc {color} --reset --list","Changes console text's color to the hex code or the RGB given or resets is with --reset. To know which color formats are allowed to use, type chcc --list"],
             ["exit","Shows exit options"]
         ],
         projects:
         [
-            ["SGK-news","2019","2021","https://sgk-news.pl","Founder and CEO"],
-            ["Hackclub","2019","now","https://hackclub.pl","Co-leader and emcee"],
-            ["Alice envisions the future","2020","2020","https://www.microsoft.com/en-eg/alice-envisions-the-future","Tech mentor"],
-            ["Hackweek","2020","2020","https://hackweek.pl","Co-leader"],
+            {
+                name: "SGK-news",
+                beginning: "2019",
+                ending: "2021",
+                website: "https://sgk-news.pl",
+                websiteActive: false,
+                role: "Founder and CEO"
+            },
+            {
+                name: "Hackclub",
+                beginning: "2019",
+                ending: "now",
+                website: "https://hackclub.pl",
+                websiteActive: true,
+                role: "Co-leader and emcee"
+            },
+            {
+                name: "Alice envisions the future",
+                beginning: "2020",
+                ending: "2020",
+                website: "https://www.microsoft.com/en-eg/alice-envisions-the-future",
+                websiteActive: true,
+                role: "Tech mentor"
+            },
+            {
+                name: "Hackweek",
+                beginning: "2020",
+                ending: "2020",
+                website: "https://hackweek.pl",
+                websiteActive: true,
+                role: "Co-leader"
+            },
+            {
+                name: "PIKNIK hackaton",
+                beginning: "2021",
+                ending: "2021",
+                website: "",
+                websiteActive: false,
+                role: "Participant and the winner"
+            }
         ],
         skills: 
         [
@@ -78,7 +114,8 @@ const data = {
                 name: "Other languages",
                 techs: ["C (mid)", "C++ (mid-advanced)","Python (learning)"]
             }
-        ]
+        ],
+        allowedColorFormats: ["standard html colors", "rgb", "rgba", "hex"]
     }
 };
 

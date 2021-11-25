@@ -60,7 +60,7 @@ export const GeneralNavbarElem = styled.div`
     border-radius: 5px;
     transition: filter 0.4s;
     cursor: pointer;
-    box-shadow: 3px 3px 4px #000;
+    box-shadow: 3px 3px 4px rgba(0,0,0,.5);
     display: block;
 
     ${(props) => 

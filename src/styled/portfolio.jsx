@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {animated as a} from "react-spring";
 
-export const PortfolioHeader = styled.header`
+export const PortfolioHeader = styled(a.header)`
     width: calc(100% - 20px);
     padding: 10px;
     text-align: center;
@@ -10,7 +10,6 @@ export const PortfolioHeader = styled.header`
     color: rgba(240,240,240,.9);
     font-faimly: "Mohave", sans-serif;
     margin-bottom: 2vh;
-    height: 7vh;
     text-shadow: 3px 3px 4px #000;
 
     @media screen and (min-width: 320px){
@@ -83,6 +82,11 @@ export const PortfolioContent = styled.div`
     overflow-x: hidden;
     overflow-y: auto;
     margin-bottom: 3vh;
+    font-size: 0.7em;
+
+    a{
+        color: inherit;
+    }
 
     
     ::-webkit-scrollbar{
@@ -117,7 +121,8 @@ export const PortfolioContentBlock = styled.div`
     font-size: 1em;
     letter-spacing: 0.07em;
     margin-bottom: 0.1vh;
-    text-shadow: 3px 3px 4px rgba(40,200,40,.4);
+    text-shadow: 3px 3px 4px rgba(40,200,40,.2);
+    line-height: 1.3em;
 
     @media screen and (min-width: 375px){
         font-size: 1.2em;
