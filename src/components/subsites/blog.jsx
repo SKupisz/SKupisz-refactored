@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 import { MainContainer } from "../../styled/main.jsx";
 import { BlogMainContainer, BlogMainHeader, BlogLinkContainer,
-    BlogLinkHeader, BlogLinkDesc } from "../../styled/blog.jsx";
+    BlogLinkHeader, BlogLinkDesc, BlogParagraph, BlogImageContainer,
+    BlogImage, BlogImageTitle } from "../../styled/blog.jsx";
 
 import Navbar from "../navbar.jsx";
 
@@ -16,8 +17,10 @@ const Blog = () => {
 
     useEffect(() => {
         const currentAddress = window.location.pathname.split("/");
-        if(currentAddress.length <= 3) setPhase(-1);
-        else if(currentAddress.length <= 5){
+        console.log(currentAddress);
+        if(currentAddress.length < 3) setPhase(-1);
+        else if(currentAddress.length >= 4) setPhase(-3);
+        else{
             if(currentAddress[2].length > 0){
                 const indOfTheArticle = blogData["menuData"].findIndex((elem) => {return elem["address"] === currentAddress[2];});
                 if(indOfTheArticle === -1) setPhase(-3);
@@ -42,7 +45,7 @@ const Blog = () => {
     <MainContainer className="block-center" iswithmainmenu="true">
         <BlogMainContainer className="block-center">
             <BlogMainHeader className="block-center">
-                {phase === -1 ? "Blog" : phase === -3 ? "The article you are looking for does not exist" : 
+                {phase === -2 || phase === -1 ? "Blog" : phase === -3 ? "The article you are looking for does not exist" : 
                 blogData["menuData"][phase]["title"]} 
             </BlogMainHeader>
             {
@@ -58,7 +61,25 @@ const Blog = () => {
                         </BlogLinkDesc>
                     </BlogLinkContainer>
                 </Link>)}
-                </> : null
+                </> : phase >= 0 ? <> {
+                    blogData["blogsContent"][phase].map((elem, ind) => {
+                        switch(elem["type"]){
+                            case "p":
+                                return <BlogParagraph className="block-center">
+                                    {elem["content"]}
+                                </BlogParagraph>;
+                            case "image":
+                                return <BlogImageContainer className="block-center">
+                                        <BlogImage src={elem["src"]} alt={elem["title"]} className="block-center"/>
+                                        <BlogImageTitle className="block-center">
+                                            {elem["title"]}
+                                        </BlogImageTitle>
+                                    </BlogImageContainer>;
+                            default: 
+                                return <></>;
+                        }
+                    })
+                } </> : null
             }
 
         </BlogMainContainer>

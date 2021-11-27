@@ -13,9 +13,8 @@ const Main = () => {
         <Routes>
             <Route exact path = "/" element = {<Welcome/>}/>
             <Route exact path = "/portfolio" element = {<Portfolio/>}/>
-            <Route path = "/blog" element = {<Blog/>}>
-                {blogData["menuData"].map((elem, ind) => <Route path = {"/blog/"+elem["address"]} element = {<Blog/>} key = {"blog-route-"+ind}/>)}
-            </Route>
+            <Route exact path = "/blog" element = {<Blog/>}/>
+            {blogData["menuData"].map((elem, ind) => <Route exact path = {"/blog/"+elem["address"]} element = {<Blog/>} key = {"blog-route-"+ind}/>)}
             <Route exact path = "/contact" element={<Contact/>}/>
         </Routes>
     </Router>;

@@ -19,7 +19,7 @@ export const GeneralNavbar = styled(a.nav)`
     width: calc(100% - 10px);
     padding: 0px 5px;
     height: ${(props) => 
-        props.opened === "true" ? "100vh" : "13vh"};
+        props.opened === "true" ? "100vh" : "14vh"};
     margin-bottom: 10vh;
     position: relative;
     top: 1vh;
