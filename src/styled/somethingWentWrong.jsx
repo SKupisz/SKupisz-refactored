@@ -42,3 +42,8 @@ export const SomethingWentWrongDescribe = styled.h2`
         width: calc(80% - 10px);
     }
 `;
+
+export const CanvasContainer = styled.div`
+    width: 100%;
+    height: 40vh;
+`
