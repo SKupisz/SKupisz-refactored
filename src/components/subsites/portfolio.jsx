@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from "react";
 import {css} from "glamor";
 import { Link } from "react-router-dom";
+import ReactHtmlParser from 'react-html-parser';
 
 import { MainContainer } from "../../styled/main.jsx";
 import { PortfolioHeader, PortfolioHider,
@@ -11,7 +12,6 @@ import data from "../../data/general.js";
 
 import Navbar from "../navbar.jsx";
 
-// install the ReactHtmlParser
 
 const Portfolio = () => {
 
@@ -64,7 +64,7 @@ const Portfolio = () => {
                                         listOperand.push(elem["name"]);
                                         listOperand.push(elem["beginning"]+"-"+elem["ending"]);
                                         listOperand.push("Role: "+elem["role"]);
-                                        if(elem["websiteActive"]) listOperand.push(`Website: <a href='${elem["website"]}'>${elem["website"]}</a>`);
+                                        if(elem["websiteActive"]) listOperand.push(ReactHtmlParser(`Website: <a href='${elem["website"]}'>${elem["website"]}</a>`));
                                         listOperand.push("");
                                         return null;
                                     });
