@@ -152,6 +152,16 @@ export const BlogParagraph = styled.p`
     }
 `;
 
+export const BlogImagePreloader = styled.div`
+    width: 180px;
+    height: 180px;
+    border: 10px solid transparent;
+    border-top-color: red;
+    border-bottom-color: red;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 10px red;
+`;
+
 export const BlogImageContainer = styled.figure`
     width: calc(100% - 10px);
     padding: 10px;

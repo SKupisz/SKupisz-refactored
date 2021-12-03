@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, Suspense} from "react";
 import { Link } from "react-router-dom";
 
 import { MainContainer } from "../../styled/main.jsx";
 import { BlogMainContainer, BlogMainHeader, BlogLinkContainer,
-    BlogLinkHeader, BlogLinkDesc, BlogParagraph, BlogImageContainer,
+    BlogLinkHeader, BlogLinkDesc, BlogParagraph, BlogImagePreloader, BlogImageContainer,
     BlogImage, BlogImageTitle } from "../../styled/blog.jsx";
 
 import Navbar from "../navbar.jsx";
@@ -65,15 +65,17 @@ const Blog = () => {
                     blogData["blogsContent"][phase].map((elem, ind) => {
                         switch(elem["type"]){
                             case "p":
-                                return <BlogParagraph className="block-center">
+                                return <BlogParagraph className="block-center" key={"elem"+ind}>
                                     {elem["content"]}
                                 </BlogParagraph>;
                             case "image":
-                                return <BlogImageContainer className="block-center">
-                                        <BlogImage src={elem["src"]} alt={elem["title"]} className="block-center"/>
-                                        <BlogImageTitle className="block-center">
-                                            {elem["title"]}
-                                        </BlogImageTitle>
+                                return <BlogImageContainer className="block-center" key={"elem"+ind}>
+                                        <Suspense fallback={<BlogImagePreloader className="block-center image-preloader"/>}>
+                                            <BlogImage src={elem["src"]} alt={elem["title"]} className="block-center"/>
+                                            <BlogImageTitle className="block-center">
+                                                {elem["title"]}
+                                            </BlogImageTitle>
+                                        </Suspense>
                                     </BlogImageContainer>;
                             default: 
                                 return <></>;

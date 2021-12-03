@@ -86,6 +86,18 @@
   }
 }
 
+@keyframes blogImageLoader {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -168,6 +180,13 @@ body{
 
 .contact-icon{
   font-size: 5em !important;
+}
+
+.image-preloader{
+  animation-name: blogImageLoader;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transition: transform 1s;
 }
 
 @media screen and (min-width: 320px) {
