@@ -190,7 +190,7 @@ body{
 }
 
 .teacup-image{
-  max-width: 30% !important;
+  max-width: 50% !important;
 }
 
 @media screen and (min-width: 320px) {
@@ -224,6 +224,9 @@ body{
   }
   .fallback-loader-bar{
     width: 60%;
+  }
+  .teacup-image{
+    max-width: 30% !important;
   }
 }
 

@@ -196,11 +196,13 @@ export const BlogImageContainer = styled.figure`
 `;
 
 export const BlogImage = styled.img`
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
-    min-height: 40vh;
-    width: auto;
     margin-bottom: 10px;
+
+    @media screen and (min-width: 425px){
+        max-width: 80%;
+    }
 
     @media screen and (min-width: 768px){
         max-width: 60%;
