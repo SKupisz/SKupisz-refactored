@@ -152,6 +152,28 @@ export const BlogParagraph = styled.p`
     }
 `;
 
+export const BlogSubHeading = styled.h2`
+    width: calc(100% - 20px);
+    padding: 10px;
+    text-align: center;
+    font-size: 1.6em;
+    letter-spacing: 0.06em;
+    font-family: "Mohave", sans-serif;
+    text-shadow: 3px 3px 4px #111;
+    margin-bottom: 20px;
+    color: rgba(240,240,240,.8);
+
+    @media screen and (min-width: 425){
+        width: calc(90% - 20px);
+        font-size: 2em;
+    }
+
+    @media screen and (min-width: 768px){
+        width: calc(80% - 20px);
+        font-size: 2.4em;
+    }
+`;
+
 export const BlogImagePreloader = styled.div`
     width: 180px;
     height: 180px;

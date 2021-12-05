@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { MainContainer } from "../../styled/main.jsx";
 import { BlogMainContainer, BlogMainHeader, BlogLinkContainer,
-    BlogLinkHeader, BlogLinkDesc, BlogParagraph, BlogImagePreloader, BlogImageContainer,
+    BlogLinkHeader, BlogLinkDesc, BlogParagraph, BlogSubHeading, BlogImagePreloader, BlogImageContainer,
     BlogImage, BlogImageTitle } from "../../styled/blog.jsx";
 
 import Navbar from "../navbar.jsx";
@@ -68,10 +68,14 @@ const Blog = () => {
                                 return <BlogParagraph className="block-center" key={"elem"+ind}>
                                     {elem["content"]}
                                 </BlogParagraph>;
+                            case "heading":
+                                return <BlogSubHeading className="block-center" key={"elem"+ind}>
+                                    {elem["content"]}
+                                </BlogSubHeading>;
                             case "image":
                                 return <BlogImageContainer className="block-center" key={"elem"+ind}>
                                         <Suspense fallback={<BlogImagePreloader className="block-center image-preloader"/>}>
-                                            <BlogImage src={elem["src"]} alt={elem["title"]} className="block-center"/>
+                                            <BlogImage src={elem["src"]} alt={elem["title"]} className={elem["class"] ? `${elem["class"]} block-center` :"block-center"}/>
                                             <BlogImageTitle className="block-center">
                                                 {elem["title"]}
                                             </BlogImageTitle>
