@@ -11,6 +11,7 @@ import { PortfolioHeader, PortfolioHider,
 import data from "../../data/general.js";
 
 import Navbar from "../navbar.jsx";
+import HeadTag from "../headTag.jsx";
 
 
 const Portfolio = () => {
@@ -127,6 +128,8 @@ const Portfolio = () => {
     },[currentConsoleList]);
 
     return <>
+    <HeadTag siteName="Simon G. Kupisz - portfolio site"
+        description="Short list of skills and projects completed by Simon G. Kupisz"/>
     <Navbar/>
     <MainContainer className="block-center" iswithmainmenu="true">
         <PortfolioHeader className="block-center">

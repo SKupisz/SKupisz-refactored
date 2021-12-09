@@ -10,6 +10,8 @@ import Saturn from "../../assets/saturn.jpg";
 
 import data from "../../data/general.js";
 
+import HeadTag from "../headTag.jsx";
+
 const useWindowSize = () => {
     const [size, setSize] = useState(0);
     useLayoutEffect(() => {
@@ -43,7 +45,9 @@ const Welcome = () => {
         else setTimeout(() => setCurrentDescWidth(60), 200);
     }, [width]);
 
-    return <MainContainer className="block-center">
+    return <>
+    <HeadTag siteName="Simon G. Kupisz - landing page"/>
+    <MainContainer className="block-center">
         <WelcomeSection width={String(currentDescWidth)} left>
             <WelcomeSectionHeader className="block-center">
                 <GlitchHeader>{headerContent}</GlitchHeader>
@@ -67,7 +71,7 @@ const Welcome = () => {
         <WelcomeSection background={Saturn} width={String(100-currentDescWidth)} right>
             <WelcomeSectionFilter/>
         </WelcomeSection>
-    </MainContainer>
+    </MainContainer></>
 };
 
 export default Welcome;

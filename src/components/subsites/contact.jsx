@@ -7,6 +7,7 @@ import { ContactHeader, ContactList,
 import data from "../../data/general.js";
 
 import Navbar from "../navbar.jsx";
+import HeadTag from "../headTag.jsx";
 
 const Contact = () => {
 
@@ -17,6 +18,8 @@ const Contact = () => {
     });
 
     return <>
+        <HeadTag siteName="Simon G. Kupisz - contact"
+            description="Contact ways to Simon G. Kupisz"/>
         <Navbar/>
         <MainContainer className="block-center" iswithmainmenu="true">
         <ContactHeader className="block-center"

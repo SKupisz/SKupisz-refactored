@@ -10,6 +10,8 @@ import Navbar from "../navbar.jsx";
 
 import blogData from "../../data/blog.js";
 
+import HeadTag from "../headTag.jsx";
+
 const Blog = () => {
 
     const [phase, setPhase] = useState(-2);
@@ -26,6 +28,7 @@ const Blog = () => {
                 if(indOfTheArticle === -1) setPhase(-3);
                 else setPhase(indOfTheArticle);
             }
+            else setPhase(-1);
         }
     },[window.location.pathname]);
 
@@ -41,6 +44,8 @@ const Blog = () => {
     }, [phase]);
 
     return <>
+    <HeadTag siteName={phase >= 0 ? blogData["menuData"][phase]["title"]+" - Simon G. Kupisz" : "Simon G. Kupisz - blog section"}
+        description={phase >= 0 ? blogData["menuData"][phase]["content"] : "The IT blog of Simon G. Kupisz"}/>
     <Navbar/>
     <MainContainer className="block-center" iswithmainmenu="true">
         <BlogMainContainer className="block-center">
