@@ -19,7 +19,8 @@ const Contact = () => {
 
     return <>
         <HeadTag siteName="Simon G. Kupisz - contact"
-            description="Contact ways to Simon G. Kupisz"/>
+            description="Contact ways to Simon G. Kupisz"
+            keywords="Simon G. Kupisz contact, contact, Szymon Kupisz kontakt"/>
         <Navbar/>
         <MainContainer className="block-center" iswithmainmenu="true">
         <ContactHeader className="block-center"

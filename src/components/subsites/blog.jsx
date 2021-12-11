@@ -45,7 +45,8 @@ const Blog = () => {
 
     return <>
     <HeadTag siteName={phase >= 0 ? blogData["menuData"][phase]["title"]+" - Simon G. Kupisz" : "Simon G. Kupisz - blog section"}
-        description={phase >= 0 ? blogData["menuData"][phase]["content"] : "The IT blog of Simon G. Kupisz"}/>
+        description={phase >= 0 ? blogData["menuData"][phase]["content"] : "The IT blog of Simon G. Kupisz"}
+        keywords={phase >= 0 ? blogData["menuData"][phase]["keywords"] : "Simon G. Kupisz blog, Programming blog, Szymon Kupisz blog"}/>
     <Navbar/>
     <MainContainer className="block-center" iswithmainmenu="true">
         <BlogMainContainer className="block-center">

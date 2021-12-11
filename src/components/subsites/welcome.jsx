@@ -46,7 +46,7 @@ const Welcome = () => {
     }, [width]);
 
     return <>
-    <HeadTag siteName="Simon G. Kupisz - landing page"/>
+    <HeadTag siteName="Simon G. Kupisz - landing page" keywords="Kupisz, IT, programming, Szymon Kupisz"/>
     <MainContainer className="block-center">
         <WelcomeSection width={String(currentDescWidth)} left>
             <WelcomeSectionHeader className="block-center">

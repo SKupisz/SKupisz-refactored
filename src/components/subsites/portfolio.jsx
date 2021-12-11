@@ -129,7 +129,8 @@ const Portfolio = () => {
 
     return <>
     <HeadTag siteName="Simon G. Kupisz - portfolio site"
-        description="Short list of skills and projects completed by Simon G. Kupisz"/>
+        description="Short list of skills and projects completed by Simon G. Kupisz"
+        keywords="portfolio, Simon G. Kupisz portfolio, Szymon Kupisz portfolio"/>
     <Navbar/>
     <MainContainer className="block-center" iswithmainmenu="true">
         <PortfolioHeader className="block-center">
