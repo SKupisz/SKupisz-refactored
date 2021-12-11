@@ -141,6 +141,16 @@ const blogData = {
             {
                 type: "p",
                 content: "And when you’ve completed all of the above points, well… start all over again. And then again, and again. As I’ve written, the training is the key to the success, especially in programming and IT stuff. But don’t worry – if you are a fresher to the coding, just give yourself some time and I’m sure one day you’ll be a trurly programmer. See you!"
+            },
+            {
+                type: "blogLinking",
+                links: [
+                    {
+                        type: "internal",
+                        to: "/blog/react-worth-to-learn-our-not",
+                        content: "React - worth to learn or not?"
+                    }
+                ]
             }
         ],
         [
@@ -214,6 +224,16 @@ const blogData = {
             {
                 type: "p",
                 content: "Brief, it's still worth to learn React although there are some alternatives for it, like Vue.js or Angular.js. However, from my personal point of view I recommend you to start with React first. If this framework doesn't suit you, don't worry - try to get used to its rules, concepts and all of that stuff or just find something other to learn, like Vue or Angular. Nevertheless, it will benefit you if you learn React.js and I'm sure you're not gonna be dissapointed 😉."
+            },
+            {
+                type: "blogLinking",
+                links: [
+                    {
+                        type: "internal",
+                        to: "/blog/how-to-step-into-the-programming",
+                        content: "How to step into the programming?"
+                    }
+                ]
             }
         ]
     ]

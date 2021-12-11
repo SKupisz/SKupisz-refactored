@@ -224,3 +224,59 @@ export const BlogImageTitle = styled.figcaption`
         font-size: 1.2em;
     }
 `;
+
+export const BlogLinkingSection = styled.section`
+    width: calc(100% - 10px);
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 0.9em;
+    letter-spacing: 0.07em;
+    color: rgba(240,240,240,.6);
+    font-family: "Mohave", sans-serif;
+    position: relative;
+    top: 2vh;
+    margin-bottom: 4vh;
+
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+
+    @media screen and (min-width: 320px){
+        font-size: 1.1em;
+        padding: 10px;
+        width: calc(100% - 20px);
+    }
+
+    @media screen and (min-width: 425px){
+        width: calc(95% - 20px);
+        font-size: 1.3em;
+    }
+
+    @media screen and (min-width: 768px){
+        width: calc(70% - 20px);
+        font-size: 1.5em;
+    }
+`;
+
+export const BlogLink = styled.div`
+    width: calc(100% - 10px);
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 2vh;
+    box-shadow: 3px 3px 4px #000;
+    border-radius: 10px;
+    height: calc(10vh - 10px);
+    line-height: calc(10vh - 10px);
+    text-shadow: 3px 3px 4px #000;
+    cursor: pointer;
+    transition: filter 0.4s;
+
+    &:hover{
+        filter: brightness(70%);
+    }
+
+    @media screen and (min-width: 768px){
+        width: calc(90% - 10px);
+    }
+`;

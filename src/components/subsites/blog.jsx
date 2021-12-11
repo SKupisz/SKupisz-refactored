@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { MainContainer } from "../../styled/main.jsx";
 import { BlogMainContainer, BlogMainHeader, BlogLinkContainer,
     BlogLinkHeader, BlogLinkDesc, BlogParagraph, BlogSubHeading, BlogImagePreloader, BlogImageContainer,
-    BlogImage, BlogImageTitle } from "../../styled/blog.jsx";
+    BlogImage, BlogImageTitle, BlogLinkingSection, BlogLink } from "../../styled/blog.jsx";
 
 import Navbar from "../navbar.jsx";
 
@@ -19,7 +19,6 @@ const Blog = () => {
 
     useEffect(() => {
         const currentAddress = window.location.pathname.split("/");
-        console.log(currentAddress);
         if(currentAddress.length < 3) setPhase(-1);
         else if(currentAddress.length >= 4) setPhase(-3);
         else{
@@ -30,6 +29,7 @@ const Blog = () => {
             }
             else setPhase(-1);
         }
+        window.scrollTo(0,0);
     },[window.location.pathname]);
 
     useEffect(() => {
@@ -86,6 +86,20 @@ const Blog = () => {
                                             </BlogImageTitle>
                                         </Suspense>
                                     </BlogImageContainer>;
+                            case "blogLinking": 
+                                return <BlogLinkingSection className="block-center" key={"elem"+ind}>
+                                    {
+                                        elem["links"].map((link, linkInd) => link["type"] === "internal" ? <Link to = {link["to"]} key={"ending-link-"+linkInd}>
+                                            <BlogLink className="block-center">
+                                                {link["content"]}
+                                            </BlogLink>
+                                        </Link> : <a href={link["to"]} key={"ending-link-"+linkInd}>
+                                            <BlogLink className="block-center">
+                                                {link["content"]}
+                                            </BlogLink>
+                                        </a>)
+                                    }
+                                </BlogLinkingSection>;
                             default: 
                                 return <></>;
                         }
