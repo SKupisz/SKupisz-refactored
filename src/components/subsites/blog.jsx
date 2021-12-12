@@ -16,6 +16,7 @@ const Blog = () => {
 
     const [phase, setPhase] = useState(-2);
     const [currentOpening, setCurrentOpening] = useState(-1);
+    const [postData, setPostData] = useState([]);
 
     useEffect(() => {
         const currentAddress = window.location.pathname.split("/");
@@ -25,7 +26,11 @@ const Blog = () => {
             if(currentAddress[2].length > 0){
                 const indOfTheArticle = blogData["menuData"].findIndex((elem) => {return elem["address"] === currentAddress[2];});
                 if(indOfTheArticle === -1) setPhase(-3);
-                else setPhase(indOfTheArticle);
+                else {
+                    const loading = require("../../data/postsContent/"+blogData["menuData"][indOfTheArticle]["contentId"]+".js");
+                    setPostData(loading["default"]["content"]);
+                    setPhase(indOfTheArticle);
+                }
             }
             else setPhase(-1);
         }
@@ -68,7 +73,7 @@ const Blog = () => {
                     </BlogLinkContainer>
                 </Link>)}
                 </> : phase >= 0 ? <> {
-                    blogData["blogsContent"][phase].map((elem, ind) => {
+                    postData.map((elem, ind) => {
                         switch(elem["type"]){
                             case "p":
                                 return <BlogParagraph className="block-center" key={"elem"+ind}>

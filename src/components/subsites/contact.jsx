@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react";
 import { MainContainer } from "../../styled/main.jsx";
 import { ContactHeader, ContactList,
     ContactWayContainer } from "../../styled/contact.jsx";
-
+    
 import data from "../../data/general.js";
 
 import Navbar from "../navbar.jsx";
