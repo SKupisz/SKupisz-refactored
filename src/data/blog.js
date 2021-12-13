@@ -10,15 +10,8 @@ const blogData = {
             address: "how-to-step-into-the-programming",
             background: ProgrammingBackground,
             keywords: "Programming for beginners, Learning programming, IT industry, Programming for freshsers",
-            contentId: "htsitp"
-        },
-        {
-            title: "My favourite programming books",
-            content: "In today's world we can learn programming from many sources: youtube tutorials, online courses, stack overflow etc. However, programming books are also a popular source of IT knowledge. Today, I will show you...",
-            address: "my-programming-books",
-            background: ProgrammingBooks,
-            keywords: "Programming books, Luke Welling, Laura Thompson, Danuta Mendrala, Marcin Szeliga, Marcin Karbowski",
-            contentId: "mfpb"
+            contentId: "htsitp",
+            date: "5th of December 2021"
         },
         {
             title: "React - worth to learn or not?",
@@ -26,7 +19,17 @@ const blogData = {
             address: "react-worth-to-learn-our-not",
             background: ReactBackground,
             keywords: "ReactJS, Learning React, Javascript Frontend Library, Is it worthy to learn React?",
-            contentId: "rwtlon"
+            contentId: "rwtlon",
+            date: "30th of April 2020"
+        },
+        {
+            title: "My favourite programming books",
+            content: "In today's world we can learn programming from many sources: youtube tutorials, online courses, stack overflow etc. However, programming books are also a popular source of IT knowledge. Today, I will show you...",
+            address: "my-programming-books",
+            background: ProgrammingBooks,
+            keywords: "Programming books, Luke Welling, Laura Thompson, Danuta Mendrala, Marcin Szeliga, Marcin Karbowski",
+            contentId: "mfpb",
+            date: "25 of April 2020"
         },
     ]
 };

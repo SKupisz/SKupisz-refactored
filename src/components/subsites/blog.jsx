@@ -2,7 +2,7 @@ import React, {useState, useEffect, Suspense} from "react";
 import { Link } from "react-router-dom";
 
 import { MainContainer } from "../../styled/main.jsx";
-import { BlogMainContainer, BlogMainHeader, BlogLinkContainer,
+import { BlogMainContainer, BlogMainHeader, BlogDateHeader, BlogLinkContainer,
     BlogLinkHeader, BlogLinkDesc, BlogParagraph, BlogSubHeading, BlogImagePreloader, BlogImageContainer,
     BlogImage, BlogImageTitle, BlogLinkingSection, BlogLink } from "../../styled/blog.jsx";
 
@@ -72,8 +72,11 @@ const Blog = () => {
                         </BlogLinkDesc>
                     </BlogLinkContainer>
                 </Link>)}
-                </> : phase >= 0 ? <> {
-                    postData.map((elem, ind) => {
+                </> : phase >= 0 ? <>
+                    {blogData["menuData"][phase]["date"].length > 0 ? <BlogDateHeader className="block-center">
+                            Published on the {blogData["menuData"][phase]["date"]}
+                        </BlogDateHeader> : null }
+                    {postData.map((elem, ind) => {
                         switch(elem["type"]){
                             case "p":
                                 return <BlogParagraph className="block-center" key={"elem"+ind}>

@@ -21,7 +21,7 @@ export const BlogMainHeader = styled.header`
     font-size: 1.7em;
     letter-spacing: 0.07em;
     color: rgba(240,240,240,.9);
-    margin-bottom: 6vh;
+    margin-bottom: 4vh;
     position: relative;
     top: 1vh;
     text-shadow: 3px 3px 4px rgba(0,0,0,.9);
@@ -33,6 +33,30 @@ export const BlogMainHeader = styled.header`
     @media screen and (min-width: 768px){
         width: calc(90% - 10px);
         font-size: 2.7em;
+    }
+`;
+
+export const BlogDateHeader = styled.header`
+    width: calc(100% - 20px);
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    letter-spacing: 0.07em;
+    color: rgba(240,240,240,.7);
+    font-family: "Mohave", sans-seirf;
+    text-shadow: 3px 3px 4px rgba(0,0,0,1);
+    margin-bottom: 6vh;
+    
+    @media screen and (min-width: 375px){
+        font-size: 1.1em;
+    }
+
+    @media screen and (min-width: 425px){
+        font-size: 1.3em;
+    }
+
+    @media screen and (min-width: 768px){
+        width: calc(90% - 20px);
     }
 `;
 
