@@ -90,6 +90,14 @@ const data = {
                 website: "",
                 websiteActive: false,
                 role: "Participant and the winner"
+            },
+            {
+                name: "Softway Polska sp. z o. o.",
+                beginning: "2021",
+                ending: "now",
+                website: "",
+                websiteActive: false,
+                role: "internship"
             }
         ],
         skills: 

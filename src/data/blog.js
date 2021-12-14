@@ -5,6 +5,15 @@ import ProgrammingBackground from "../assets/how-to-step-into-programming.jpg";
 const blogData = {
     menuData: [
         {
+            title: "Back to the past – shortly about C",
+            content: "Day by day, we witness some programming languages becoming obsolete. Generally, these are the languages that have been used for a while, like twenty years or even more...",
+            address: "back-to-the-past",
+            background: ProgrammingBooks,
+            keywords: "C language, Programming in C, Why you should learn C, C",
+            contentId: "bttpsac",
+            date: "14th of December 2021"
+        },
+        {
             title: "How to step into the programming?",
             content: "Nobody is surprised how many things in your daily life are related to programming and the IT industry today. No matter if you open your mobile phone, or you’re travelling by plane or...",
             address: "how-to-step-into-the-programming",
