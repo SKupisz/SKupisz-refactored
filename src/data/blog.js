@@ -1,9 +1,19 @@
 import ProgrammingBooks from "../assets/my-programming-books-background.jpg";
 import ReactBackground from "../assets/reactBackground.png";
 import ProgrammingBackground from "../assets/how-to-step-into-programming.jpg";
+import HTMLBackground from "../assets/html-code-background.jpg";
 
 const blogData = {
     menuData: [
+        {
+            title: "The Divology – what is that and why should you avoid it?",
+            content: "When you think of building a web application, you can think of many different technologies to use. Will React.JS be a good choice for the UI design? Maybe...",
+            address: "the-divology",
+            background: HTMLBackground,
+            keywords: "HTML, web programming, HTML tags",
+            contentId: "tdwitaw",
+            date: "2nd of January 2021"
+        },
         {
             title: "Back to the past – shortly about C",
             content: "Day by day, we witness some programming languages becoming obsolete. Generally, these are the languages that have been used for a while, like twenty years or even more...",
