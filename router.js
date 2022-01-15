@@ -1,15 +1,10 @@
-const React = require("react");
-const ReactRouter = require("react-router");
-const Switch = ReactRouter.Switch;
-const Route = ReactRouter.Route;
+import React from 'react';
+import { Route } from 'react-router';
 
-const Router = () => (
-    <Switch>
-        <Route path="/"/>
-        <Route path = "/portfolio"/>
-        <Route path = "/blog"/>
-        <Route exact path = "/contact"/>
-    </Switch>
-);
-
-module.exports = Router;
+export default (
+  <Route>
+    <Route path='/portfolio' />
+    <Route path="/blog"/>
+    <Route path="/contact"/>
+  </Route>
+)
