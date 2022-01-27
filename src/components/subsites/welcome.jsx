@@ -48,7 +48,7 @@ const Welcome = () => {
     return <>
     <HeadTag siteName="Simon G. Kupisz - landing page" keywords="Kupisz, IT, programming, Szymon Kupisz"/>
     <MainContainer className="block-center">
-        <WelcomeSection width={String(currentDescWidth)} left>
+        <WelcomeSection width={String(currentDescWidth)} left="true">
             <WelcomeSectionHeader className="block-center">
                 <GlitchHeader>{headerContent}</GlitchHeader>
                 <GlitchHeader className="glitch-1">{headerContent}</GlitchHeader>
@@ -68,7 +68,7 @@ const Welcome = () => {
                 </Link>)}
             </WelcomeMenu>
         </WelcomeSection>
-        <WelcomeSection background={Saturn} width={String(100-currentDescWidth)} right>
+        <WelcomeSection background={Saturn} width={String(100-currentDescWidth)} right="true">
             <WelcomeSectionFilter/>
         </WelcomeSection>
     </MainContainer></>
