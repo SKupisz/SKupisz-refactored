@@ -1,4 +1,4 @@
-import IAmSpeed from "../../assets/iamspeed.jpg";
+import IAmSpeed from "../../assets/iamspeed.webp";
 import NinjaTurtles from "../../assets/c-and-other-languages.jpg";
 
 const Data = {

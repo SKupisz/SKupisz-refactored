@@ -1,7 +1,7 @@
-import ProgrammingBooks from "../assets/my-programming-books-background.jpg";
+import ProgrammingBooks from "../assets/my-programming-books-background.webp";
 import ReactBackground from "../assets/reactBackground.png";
 import ProgrammingBackground from "../assets/how-to-step-into-programming.webp";
-import HTMLBackground from "../assets/html-code-background.jpg";
+import HTMLBackground from "../assets/html-code-background.webp";
 
 const blogData = {
     menuData: [

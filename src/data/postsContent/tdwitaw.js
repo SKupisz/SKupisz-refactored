@@ -1,4 +1,4 @@
-import SEO from "../../assets/seo.jpg";
+import SEO from "../../assets/seo.webp";
 
 const Data = {
     content: [
