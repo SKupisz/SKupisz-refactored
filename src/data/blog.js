@@ -1,6 +1,6 @@
 import ProgrammingBooks from "../assets/my-programming-books-background.jpg";
 import ReactBackground from "../assets/reactBackground.png";
-import ProgrammingBackground from "../assets/how-to-step-into-programming.jpg";
+import ProgrammingBackground from "../assets/how-to-step-into-programming.webp";
 import HTMLBackground from "../assets/html-code-background.jpg";
 
 const blogData = {

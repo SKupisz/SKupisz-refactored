@@ -6,7 +6,7 @@ import { WelcomeSection, WelcomeSectionFilter, WelcomeSectionHeader,
     GlitchHeader, DescribeContainer, WelcomeMenu,
     WelcomeMenuItem } from "../../styled/welcome.jsx";
 
-import Saturn from "../../assets/saturn.jpg";
+import Saturn from "../../assets/saturn.webp";
 
 import data from "../../data/general.js";
 

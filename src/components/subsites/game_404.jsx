@@ -2,7 +2,7 @@ import React, {useRef, useState} from "react";
 import {useFrame, useLoader} from "@react-three/fiber";
 import {TextureLoader} from "three";
 
-import Mars from "../../assets/pluton.jpg";
+import Mars from "../../assets/pluton.webp";
 
 const Game = (props) => {
 

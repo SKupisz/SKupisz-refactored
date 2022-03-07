@@ -1,6 +1,6 @@
-import TeaCup from "../../assets/teacup.png";
-import WhatDoesntKillYou from "../../assets/whatDoesntKillYou.jpg";
-import ApesTogetherStrong from "../../assets/apes.jpg";
+import TeaCup from "../../assets/teacup.webp";
+import WhatDoesntKillYou from "../../assets/whatDoesntKillYou.webp";
+import ApesTogetherStrong from "../../assets/apes.webp";
 
 const Data = {
         content: [
