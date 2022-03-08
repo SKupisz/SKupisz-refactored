@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useLayoutEffect} from "react";
+import React, {useState, useEffect, useLayoutEffect, Suspense} from "react";
 import {Link} from "react-router-dom";
 
 import { MainContainer } from "../../styled/main.jsx";
@@ -48,29 +48,31 @@ const Welcome = () => {
     return <>
     <HeadTag siteName="Simon G. Kupisz - landing page" keywords="Kupisz, IT, programming, Szymon Kupisz"/>
     <MainContainer className="block-center">
-        <WelcomeSection width={String(currentDescWidth)} left="true">
-            <WelcomeSectionHeader className="block-center">
-                <GlitchHeader>{headerContent}</GlitchHeader>
-                <GlitchHeader className="glitch-1">{headerContent}</GlitchHeader>
-                <GlitchHeader className="glitch-2">{headerContent}</GlitchHeader>
-                <GlitchHeader className="glitch-3">{headerContent}</GlitchHeader>
-            </WelcomeSectionHeader>
-            <DescribeContainer className="block-center">
-                I am a 18-years-old passionate of programming. My journey with it started when I was 9 years old. Currently, I am a student of
-                Faculty of Mathematics and Information Science of the Warsaw University of Technology. I'm interested in broadening my knowledge about IT and programming 
-                as much as possible.
-            </DescribeContainer>
-            <WelcomeMenu className="block-center" opacity={String(currentMenuOpacity)}>
-                {MenuItems.map((elem, ind) => <Link key={"nav-elem-"+ind} to = {elem["address"]}>
-                    <WelcomeMenuItem>
-                        {elem["content"]}
-                    </WelcomeMenuItem>
-                </Link>)}
-            </WelcomeMenu>
-        </WelcomeSection>
-        <WelcomeSection background={Saturn} width={String(100-currentDescWidth)} right="true">
-            <WelcomeSectionFilter/>
-        </WelcomeSection>
+        <Suspense fallback={<></>}>
+            <WelcomeSection width={String(currentDescWidth)} left="true">
+                <WelcomeSectionHeader className="block-center">
+                    <GlitchHeader>{headerContent}</GlitchHeader>
+                    <GlitchHeader className="glitch-1">{headerContent}</GlitchHeader>
+                    <GlitchHeader className="glitch-2">{headerContent}</GlitchHeader>
+                    <GlitchHeader className="glitch-3">{headerContent}</GlitchHeader>
+                </WelcomeSectionHeader>
+                <DescribeContainer className="block-center">
+                    I am a 18-years-old passionate of programming. My journey with it started when I was 9 years old. Currently, I am a student of
+                    Faculty of Mathematics and Information Science of the Warsaw University of Technology. I'm interested in broadening my knowledge about IT and programming 
+                    as much as possible.
+                </DescribeContainer>
+                <WelcomeMenu className="block-center" opacity={String(currentMenuOpacity)}>
+                    {MenuItems.map((elem, ind) => <Link key={"nav-elem-"+ind} to = {elem["address"]}>
+                        <WelcomeMenuItem>
+                            {elem["content"]}
+                        </WelcomeMenuItem>
+                    </Link>)}
+                </WelcomeMenu>
+            </WelcomeSection>
+            <WelcomeSection background={Saturn} width={String(100-currentDescWidth)} right="true">
+                <WelcomeSectionFilter/>
+            </WelcomeSection>
+        </Suspense>
     </MainContainer></>
 };
 

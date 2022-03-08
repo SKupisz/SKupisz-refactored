@@ -6,7 +6,7 @@ const RedirectElem = ({addr}) => {
 
     useEffect(() => {
         nav(addr);
-    }, [])
+    }, [addr, nav])
 
     return <>
     </>

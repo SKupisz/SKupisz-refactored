@@ -120,7 +120,7 @@ const Portfolio = () => {
 
     useEffect(() => {
         setTimeout(() => setHiderController(0), 200);
-        setTimeout(() => setConsoleLeftPos(0), 500);
+        setTimeout(() => setConsoleLeftPos(0), 400);
     });
 
     useEffect(() => {

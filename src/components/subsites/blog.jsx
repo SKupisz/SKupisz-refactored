@@ -2,11 +2,12 @@ import React, {useState, useEffect, Suspense} from "react";
 import { Link } from "react-router-dom";
 
 import { MainContainer } from "../../styled/main.jsx";
-import { BlogMainContainer, BlogMainHeader, BlogDateHeader, BlogLinkContainer,
-    BlogLinkHeader, BlogLinkDesc, BlogParagraph, BlogSubHeading, BlogImagePreloader, BlogImageContainer,
+import { BlogMainContainer, BlogMainHeader, BlogDateHeader, BlogParagraph, 
+    BlogSubHeading, BlogImagePreloader, BlogImageContainer,
     BlogImage, BlogImageTitle, BlogLinkingSection, BlogLink } from "../../styled/blog.jsx";
 
 import Navbar from "../navbar.jsx";
+import BlogLinkComponent from "../helpers/blog/BlogLinkComponent.jsx";
 
 import blogData from "../../data/blog.js";
 
@@ -15,7 +16,6 @@ import HeadTag from "../headTag.jsx";
 const Blog = () => {
 
     const [phase, setPhase] = useState(-2);
-    const [currentOpening, setCurrentOpening] = useState(-1);
     const [postData, setPostData] = useState([]);
 
     useEffect(() => {
@@ -37,17 +37,6 @@ const Blog = () => {
         window.scrollTo(0,0);
     },[window.location.pathname]);
 
-    useEffect(() => {
-        if(phase === -1){
-            setCurrentOpening(-1);
-            setTimeout(() => {
-                for(let i = 0 ; i <= blogData["menuData"].length; i++){
-                    setTimeout(() => setCurrentOpening(i), 200);
-                }
-            }, 200);
-        }
-    }, [phase]);
-
     return <>
     <HeadTag siteName={phase >= 0 ? blogData["menuData"][phase]["title"]+" - Simon G. Kupisz" : "Simon G. Kupisz - blog section"}
         description={phase >= 0 ? blogData["menuData"][phase]["content"] : "The IT blog of Simon G. Kupisz"}
@@ -61,18 +50,11 @@ const Blog = () => {
             </BlogMainHeader>
             {
                 phase === -1 ? <>
-                {blogData["menuData"].map((elem, ind) => <Link to = {"/blog/"+elem["address"]} key = {"article-link-"+ind}>  
-                    <BlogLinkContainer className="block-center" backgroundsrc={elem["background"]}
-                        height={ind <= currentOpening ? "40vh" : "0vh"}>
-                        <BlogLinkHeader className="block-center">
-                            {elem["title"]}
-                        </BlogLinkHeader>
-                        <BlogLinkDesc className="block-center">
-                            {elem["content"]}
-                        </BlogLinkDesc>
-                    </BlogLinkContainer>
-                </Link>)}
-                </> : phase >= 0 ? <>
+                {blogData["menuData"].map((elem, ind) => <Suspense fallback={<BlogLinkComponent elem={{title: "Loading...", content: "", background: null}} />}>
+                        <Link to={`/blog/${elem["address"]}`} key = {"article-link-"+ind}>
+                            <BlogLinkComponent elem={elem} />
+                        </Link>
+                    </Suspense>)} </> : phase >= 0 ? <>
                     {blogData["menuData"][phase]["date"].length > 0 ? <BlogDateHeader className="block-center">
                             Published on the {blogData["menuData"][phase]["date"]}
                         </BlogDateHeader> : null }

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, Suspense} from "react";
 
 import { MainContainer } from "../../styled/main.jsx";
 import { ContactHeader, ContactList,
@@ -32,9 +32,11 @@ const Contact = () => {
             {data["contactWays"].map((elem, ind) => elem["address"] === null ? <ContactWayContainer key={"contact-way-"+ind} className="block-center">
                 {elem["icon"]}
             </ContactWayContainer> : <a href = {elem["address"]} key = {"contact-way-"+ind} target="blank">
-            <ContactWayContainer key={"contact-way-"+ind} className="block-center" islink="">
-                {elem["icon"]}
-            </ContactWayContainer>
+            <Suspense fallback={<></>}>
+                <ContactWayContainer key={"contact-way-"+ind} className="block-center" islink="">
+                    {elem["icon"]}
+                </ContactWayContainer>
+            </Suspense>
             </a>)}
         </ContactList>
     </MainContainer></>
