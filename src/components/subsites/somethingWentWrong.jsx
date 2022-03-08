@@ -1,5 +1,4 @@
 import React, {Suspense} from "react";
-import { Canvas } from "@react-three/fiber";
 
 import { MainContainer } from "../../styled/main.jsx";
 import { SomethingWentWrongHeader, SomethingWentWrongDescribe,
@@ -23,11 +22,9 @@ const SomethingWentWrong = () => {
             This page does not exist. Try to go somewhere else
         </SomethingWentWrongDescribe>
         <CanvasContainer className="block-center">
-            <Canvas>
-                <Suspense fallback={null}>
-                    <Game/>
-                </Suspense>
-            </Canvas>
+            <Suspense fallback={<></>}>
+                <Game/>
+            </Suspense>
         </CanvasContainer>
     </MainContainer>
     </>

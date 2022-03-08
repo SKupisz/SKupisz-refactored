@@ -1,6 +1,6 @@
-import PhpAndMySQL from "../../assets/phpAndMySQL.jpg";
+import PhpAndMySQL from "../../assets/phpAndMySQL.webp";
 import PracticalSQLCourse from "../../assets/practicalSQLCourse.jpg";
-import BasicsOfCryptography from "../../assets/basicsOfCryptography.jpg";
+import BasicsOfCryptography from "../../assets/basicsOfCryptography.webp";
 
 const Data = {
     content: [
