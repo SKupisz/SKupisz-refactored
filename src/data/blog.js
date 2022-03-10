@@ -6,13 +6,22 @@ import HTMLBackground from "../assets/html-code-background.webp";
 const blogData = {
     menuData: [
         {
+            title: "Laziness pays back – shortly about lazy loading",
+            content: "",
+            address: "lazy-loading-overview",
+            background: ProgrammingBackground,
+            keywords: "lazy loading, Simon Kupisz lazy loading, lazy loading react.js",
+            contentId: "lpbsall",
+            date: "10th of March 2022"
+        },
+        {
             title: "The Divology – what is that and why should you avoid it?",
             content: "When you think of building a web application, you can think of many different technologies to use. Will React.JS be a good choice for the UI design? Maybe...",
             address: "the-divology",
             background: HTMLBackground,
             keywords: "HTML, web programming, HTML tags",
             contentId: "tdwitaw",
-            date: "2nd of January 2021"
+            date: "2nd of January 2022"
         },
         {
             title: "Back to the past – shortly about C",
