@@ -45,6 +45,26 @@ const Data = {
             type: "p",
             content: "As you know now, lazy loading is a topic you cannot omit nowadays. Even if you consider it useless, it would be hard for you to say that a preloader looks worse than a partially loaded image. Nevertheless, the idea of lazy loading and implementing it are cornerstones of several IT projects. Moreover, we can be sure that it will be even more crucial in the future. Now you can see that in terms of loading, laziness is not always bad – until next time 😉"
         },
+        {
+            type: "blogLinking",
+            links: [
+                {
+                    type: "internal",
+                    to: "/blog/react-worth-to-learn-our-not",
+                    content: "React - worth to learn or not?"
+                },
+                {
+                    type: "internal",
+                    to: "/blog/the-divology",
+                    content: "The Divology – what is that and why should you avoid it?"
+                },
+                {
+                    type: "internal",
+                    to: "/blog/how-to-step-into-the-programming",
+                    content: "How to step into the programming?"
+                }
+            ]
+        }
     ]
 }
 

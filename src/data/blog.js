@@ -2,14 +2,15 @@ import ProgrammingBooks from "../assets/my-programming-books-background.webp";
 import ReactBackground from "../assets/reactBackground.png";
 import ProgrammingBackground from "../assets/how-to-step-into-programming.webp";
 import HTMLBackground from "../assets/html-code-background.webp";
+import Fire from "../assets/fire.webp";
 
 const blogData = {
     menuData: [
         {
             title: "Laziness pays back – shortly about lazy loading",
-            content: "",
+            content: "For a moment, let’s go back in time to school. What can you remember from that time? Some friendships, perhaps...",
             address: "lazy-loading-overview",
-            background: ProgrammingBackground,
+            background: Fire,
             keywords: "lazy loading, Simon Kupisz lazy loading, lazy loading react.js",
             contentId: "lpbsall",
             date: "10th of March 2022"
