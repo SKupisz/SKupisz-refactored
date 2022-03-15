@@ -1,5 +1,5 @@
 import React, {useRef, useState} from "react";
-import { Canvas, useFrame, useLoader} from "@react-three/fiber";
+import { useFrame, useLoader} from "@react-three/fiber";
 import {TextureLoader} from "three";
 
 import Mars from "../../assets/pluton.webp";
@@ -31,14 +31,14 @@ const Game = (props) => {
         setAdders(addOperand);
     })
 
-    return <Canvas>
+    return <>
         <pointLight color={`rgb(${rgb[0]},${rgb[1]},${rgb[2]})`} position={[0,0,2]} 
         intensity={5} ref = {colorRef}/>
         <mesh ref = {boxRef}>
             <sphereGeometry args={[1,40,40]}/>
             <meshPhongMaterial map={marsMap} opacity={0.9}/>
         </mesh>
-    </Canvas>
+    </>
 };
 
 export default Game;

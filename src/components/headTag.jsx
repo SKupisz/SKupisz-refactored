@@ -7,7 +7,7 @@ const HeadTag = ({siteName, description="Simon George Kupisz's site", robotsTags
         <title>{siteName}</title>
         <meta name="description" content={description}/>
         <meta name="robots" content={robotsTags}/>
-        {keywords.length > 0 ? <meta name="keywords" content={keywords}/>: <></>}
+        {keywords.length > 0 ? <meta name="keywords" content={keywords}/>: <meta name="keywords" content=""/>}
         <script type="application/ld+json" data-react-helmet="true" data-rh="true">
             {
                 JSON.stringify({
