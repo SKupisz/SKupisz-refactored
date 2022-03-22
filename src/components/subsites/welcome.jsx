@@ -27,7 +27,7 @@ const useWindowSize = () => {
 const Welcome = () => {
 
     const headerContent = "Who am I?";
-    const MenuItems = data["mainNavbar"]
+    const MenuItems = data["mainNavbar"];
 
     const [currentDescWidth, setCurrentDescWidth] = useState(0);
     const [currentMenuOpacity, setCurrentMenuOpacity] = useState(0);
@@ -69,9 +69,9 @@ const Welcome = () => {
                     </Link>)}
                 </WelcomeMenu>
             </WelcomeSection>
-            <WelcomeSection background={Saturn} width={String(100-currentDescWidth)} right="true">
+            {width < 768 ? <></> : <WelcomeSection background={Saturn} width={String(100-currentDescWidth)} right="true">
                 <WelcomeSectionFilter/>
-            </WelcomeSection>
+            </WelcomeSection>}
         </Suspense>
     </MainContainer></>
 };
