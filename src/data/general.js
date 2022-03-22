@@ -94,10 +94,18 @@ const data = {
             {
                 name: "Softway Polska sp. z o. o.",
                 beginning: "2021",
-                ending: "now",
+                ending: "2022",
                 website: "",
                 websiteActive: false,
                 role: "internship"
+            },
+            {
+                name: "Softway Polska sp. z o. o.",
+                beginning: "2022",
+                ending: "",
+                website: "",
+                websiteActive: false,
+                role: "IT support, SEO/SEM specialist"
             }
         ],
         skills: 
@@ -120,7 +128,7 @@ const data = {
             },
             {
                 name: "Other languages",
-                techs: ["C (mid)", "C++ (mid-advanced)","Python (learning)"]
+                techs: ["C (mid-advanced)", "C++ (mid-advanced)","Python (learning)"]
             }
         ],
         allowedColorFormats: ["standard html colors", "rgb", "rgba", "hex"]
