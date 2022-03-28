@@ -1,7 +1,19 @@
 import styled from "styled-components";
 import {animated as a} from "react-spring";
 
-export const MainContainer = styled.main`
+interface MainContainerInterface {
+    iswithmainmenu: string
+}
+
+interface NavbarInterface{
+    opened: string
+}
+
+interface GeneralNavbarElemInterface{
+    ind: string
+}
+
+export const MainContainer = styled.main<MainContainerInterface>`
     width: 100%;
     text-align: center;
     padding-bottom: 10px;
@@ -15,7 +27,7 @@ export const MainContainer = styled.main`
         `: ""}
 `;
 
-export const GeneralNavbar = styled(a.nav)`
+export const GeneralNavbar = styled(a.nav)<NavbarInterface>`
     width: calc(100% - 10px);
     padding: 0px 5px;
     height: ${(props) => 
@@ -46,7 +58,7 @@ export const GeneralNavbar = styled(a.nav)`
     }
 `;
 
-export const GeneralNavbarElem = styled.div`
+export const GeneralNavbarElem = styled.div<GeneralNavbarElemInterface>`
     width: calc(100% - 20px);
     padding: 10px;
     margin: 10px auto;

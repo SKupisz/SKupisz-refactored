@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom"; 
 import MenuIcon from '@mui/icons-material/Menu';
 
-import { GeneralNavbar, GeneralNavbarElem, GeneralNavbarIcon } from "../styled/main.jsx";
+import { GeneralNavbar, GeneralNavbarElem, GeneralNavbarIcon } from "../styled/main";
 
 import data from "../data/general.js";
 

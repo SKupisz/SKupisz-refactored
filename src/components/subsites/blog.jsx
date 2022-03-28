@@ -1,7 +1,7 @@
 import React, {useState, useEffect, Suspense} from "react";
 import { Link } from "react-router-dom";
 
-import { MainContainer } from "../../styled/main.jsx";
+import { MainContainer } from "../../styled/main";
 import { BlogMainContainer, BlogMainHeader, BlogDateHeader, BlogParagraph, 
     BlogSubHeading, BlogImagePreloader, BlogImageContainer,
     BlogImage, BlogImageTitle, BlogLinkingSection, BlogLink } from "../../styled/blog.jsx";

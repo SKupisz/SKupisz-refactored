@@ -1,7 +1,7 @@
 import React, {Suspense} from "react";
 import { Canvas } from "@react-three/fiber";
 
-import { MainContainer } from "../../styled/main.jsx";
+import { MainContainer } from "../../styled/main";
 import { SomethingWentWrongHeader, SomethingWentWrongDescribe,
     CanvasContainer } from "../../styled/somethingWentWrong.jsx";
 

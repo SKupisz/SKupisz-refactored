@@ -3,7 +3,7 @@ import {css} from "glamor";
 import { Link } from "react-router-dom";
 import ReactHtmlParser from 'react-html-parser';
 
-import { MainContainer } from "../../styled/main.jsx";
+import { MainContainer } from "../../styled/main";
 import { PortfolioHeader, PortfolioHider,
     PortfolioWrapper, PortfolioContent, PortfolioContentBlock,
     PortfolioInputContainer, PortfolioInput } from "../../styled/portfolio.jsx";

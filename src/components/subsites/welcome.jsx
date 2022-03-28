@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useLayoutEffect, Suspense} from "react";
 import {Link} from "react-router-dom";
 
-import { MainContainer } from "../../styled/main.jsx";
+import { MainContainer } from "../../styled/main";
 import { WelcomeSection, WelcomeSectionFilter, WelcomeSectionHeader,
     GlitchHeader, DescribeContainer, WelcomeMenu,
     WelcomeMenuItem } from "../../styled/welcome.jsx";
