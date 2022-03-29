@@ -1,7 +1,18 @@
 import styled from "styled-components";
 import {animated as a } from "react-spring";
 
-export const WelcomeSection = styled(a.section)`
+interface WelcomeSectionInterface{
+    background?: any,
+    left?: boolean,
+    right?: boolean,
+    width?: number
+}
+
+interface WelcomeMenuInterface{
+    opacity?: number
+}
+
+export const WelcomeSection = styled(a.section)<WelcomeSectionInterface>`
     width: ${(props) => 
         props.left ? `100%` : props.right ? "0%" : "50%"};
     padding: 0px;
@@ -29,7 +40,7 @@ export const WelcomeSection = styled(a.section)`
         background: rgba(240,240,240,.3);
     }
     background: ${(props) => 
-        props.background ? `url("${props.background}")` : "none"};
+        props.background !== undefined ? `url("${props.background}")` : "none"};
     background-size: cover;
 
     @media screen and (min-width: 768px){
@@ -95,7 +106,7 @@ export const DescribeContainer = styled.article`
     }
 `;
 
-export const WelcomeMenu = styled(a.nav)`
+export const WelcomeMenu = styled(a.nav)<WelcomeMenuInterface>`
     width: 95%;
     height: 20vh;
     height: fit-content;

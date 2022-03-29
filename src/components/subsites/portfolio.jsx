@@ -6,7 +6,7 @@ import ReactHtmlParser from 'react-html-parser';
 import { MainContainer } from "../../styled/main";
 import { PortfolioHeader, PortfolioHider,
     PortfolioWrapper, PortfolioContent, PortfolioContentBlock,
-    PortfolioInputContainer, PortfolioInput } from "../../styled/portfolio.jsx";
+    PortfolioInputContainer, PortfolioInput } from "../../styled/portfolio";
 
 import data from "../../data/general.js";
 

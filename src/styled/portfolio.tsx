@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import {animated as a} from "react-spring";
 
+interface NumberInterface{
+    height?: string,
+    top?: string,
+    left? : string
+}
+
 export const PortfolioHeader = styled(a.header)`
     width: calc(100% - 20px);
     padding: 10px;
@@ -26,18 +32,18 @@ export const PortfolioHeader = styled(a.header)`
     }
 `;
 
-export const PortfolioHider = styled(a.div)`
+export const PortfolioHider = styled(a.div)<NumberInterface>`
     height: ${(props) => 
-        props.height ? props.height: "0%"};
+        props.height !== undefined ? props.height: "0%"};
     width: 100%;
     position: relative;
     top: ${(props) => 
-        props.top ? props.top: "0%"};
+        props.top !== undefined ? props.top: "0%"};
     background: #111;
     transition: all 0.4s;
 `;
 
-export const PortfolioWrapper = styled(a.section)`
+export const PortfolioWrapper = styled(a.section)<NumberInterface>`
     width: calc(95% - 22px);
     height: calc(44vh - 22px);
     padding: 10px;
@@ -46,7 +52,7 @@ export const PortfolioWrapper = styled(a.section)`
     box-shadow: 3px 3px 4px #000;
     position: relative;
     left: ${(props) => 
-        props.left ? props.left: "0%"};
+        props.left !== undefined ? props.left: "0%"};
     transition: left 0.4s;
     background: rgba(10,10,10,1);
     top: 5vh;

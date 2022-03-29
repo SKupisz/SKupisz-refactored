@@ -2,7 +2,7 @@ import React, {useState, useEffect, Suspense} from "react";
 
 import { MainContainer } from "../../styled/main";
 import { ContactHeader, ContactList,
-    ContactWayContainer } from "../../styled/contact.jsx";
+    ContactWayContainer } from "../../styled/contact";
     
 import data from "../../data/general.js";
 

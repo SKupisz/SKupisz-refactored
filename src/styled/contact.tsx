@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import {animated as a } from "react-spring";
 
-export const ContactHeader = styled(a.div)`
+interface PositionInterface{
+    left?: string
+}
+
+export const ContactHeader = styled(a.div)<PositionInterface>`
     width: calc(100% - 20px);
     padding: 10px;
     text-align: center;
@@ -13,7 +17,7 @@ export const ContactHeader = styled(a.div)`
     position: relative;
     top: 4vh;
     left: ${(props) => 
-        props.left ? props.left : "0%"};
+        props.left !== undefined ? props.left : "0%"};
     margin-bottom: 11vh;
     text-transform: uppercase;
     transition: left 0.4s;
@@ -24,14 +28,14 @@ export const ContactHeader = styled(a.div)`
     }
 `;
 
-export const ContactList = styled(a.main)`
+export const ContactList = styled(a.main)<PositionInterface>`
     width: calc(100% - 20px);
     height: fit-content;
     padding: 10px;
     border-radius: 10px;
     position: relative;
     left: ${(props) => 
-        props.left ? props.left: "0%"};
+        props.left !== undefined ? props.left: "0%"};
     transition: left 0.8s;
     font-family: "Mohave", sans-serif;
 

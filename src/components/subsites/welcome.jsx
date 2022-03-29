@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import { MainContainer } from "../../styled/main";
 import { WelcomeSection, WelcomeSectionFilter, WelcomeSectionHeader,
     GlitchHeader, DescribeContainer, WelcomeMenu,
-    WelcomeMenuItem } from "../../styled/welcome.jsx";
+    WelcomeMenuItem } from "../../styled/welcome";
 
 import Saturn from "../../assets/saturn.webp";
 

@@ -3,8 +3,7 @@ import { Canvas } from "@react-three/fiber";
 
 import { MainContainer } from "../../styled/main";
 import { SomethingWentWrongHeader, SomethingWentWrongDescribe,
-    CanvasContainer } from "../../styled/somethingWentWrong.jsx";
-
+    CanvasContainer } from "../../styled/somethingWentWrong";
 import Navbar from "../navbar.jsx";
 import HeadTag from "../headTag.jsx";
 import Game from "./game_404.jsx";
