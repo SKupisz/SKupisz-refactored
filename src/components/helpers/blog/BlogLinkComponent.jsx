@@ -1,6 +1,6 @@
 import React from "react";
 
-import {BlogLinkContainer, BlogLinkHeader, BlogLinkDesc} from "../../../styled/blog.jsx";
+import {BlogLinkContainer, BlogLinkHeader, BlogLinkDesc} from "../../../styled/blog";
 
 const BlogLinkComponent = ({elem}) => {
 

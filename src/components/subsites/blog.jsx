@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { MainContainer } from "../../styled/main";
 import { BlogMainContainer, BlogMainHeader, BlogDateHeader, BlogParagraph, 
     BlogSubHeading, BlogImagePreloader, BlogImageContainer,
-    BlogImage, BlogImageTitle, BlogLinkingSection, BlogLink } from "../../styled/blog.jsx";
+    BlogImage, BlogImageTitle, BlogLinkingSection, BlogLink } from "../../styled/blog";
 
 import Navbar from "../navbar.jsx";
 import BlogLinkComponent from "../helpers/blog/BlogLinkComponent.jsx";

@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import {animated as a} from "react-spring";
 
+interface BlogLinkContainerInterface{
+    height?: string,
+    backgroundsrc?: any
+}
+
 export const BlogMainContainer = styled(a.section)`
     width: calc(95% - 10px);
     height: fit-content;
@@ -60,17 +65,17 @@ export const BlogDateHeader = styled.header`
     }
 `;
 
-export const BlogLinkContainer = styled(a.div)`
+export const BlogLinkContainer = styled(a.div)<BlogLinkContainerInterface>`
     width: calc(95% - 20px);
     height: ${(props) => 
-        props.height ? props.height: "40vh"};
+        props.height !== undefined ? props.height: "40vh"};
     overflow-y: hidden;
     padding: 0px 10px;
     border-radius: 10px;
     box-shadow: 3px 3px 4px #000;
     margin-bottom: 30px;
     background: ${(props) => 
-        props.backgroundsrc ? `url(${props.backgroundsrc})` : "#000"};
+        props.backgroundsrc !== undefined ? `url(${props.backgroundsrc})` : "#000"};
     background-size: cover;
     color: rgba(240,240,240,.9);
     transition: all 0.4s;
