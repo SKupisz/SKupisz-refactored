@@ -6,12 +6,12 @@ import { BlogMainContainer, BlogMainHeader, BlogDateHeader, BlogParagraph,
     BlogSubHeading, BlogImagePreloader, BlogImageContainer,
     BlogImage, BlogImageTitle, BlogLinkingSection, BlogLink } from "../../styled/blog";
 
-import Navbar from "../navbar.jsx";
+import Navbar from "../navbar";
 import BlogLinkComponent from "../helpers/blog/BlogLinkComponent.jsx";
 
 import blogData from "../../data/blog.js";
 
-import HeadTag from "../headTag.jsx";
+import HeadTag from "../headTag";
 
 const Blog = () => {
 

@@ -10,8 +10,8 @@ import { PortfolioHeader, PortfolioHider,
 
 import data from "../../data/general.js";
 
-import Navbar from "../navbar.jsx";
-import HeadTag from "../headTag.jsx";
+import Navbar from "../navbar";
+import HeadTag from "../headTag";
 
 
 const Portfolio = () => {

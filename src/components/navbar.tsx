@@ -8,7 +8,7 @@ import data from "../data/general.js";
 
 const Navbar = () => {
 
-    const [isOpened, toggleIsOpened] = useState(false);
+    const [isOpened, toggleIsOpened] = useState<boolean>(false);
 
     return <GeneralNavbar className="block-center"
         opened={isOpened.toString()}>

@@ -10,7 +10,7 @@ import Saturn from "../../assets/saturn.webp";
 
 import data from "../../data/general.js";
 
-import HeadTag from "../headTag.jsx";
+import HeadTag from "../headTag";
 
 const useWindowSize = () => {
     const [size, setSize] = useState(0);

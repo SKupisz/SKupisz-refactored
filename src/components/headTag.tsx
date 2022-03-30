@@ -1,8 +1,16 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import AuthorImage from "../assets/simonKupisz.jpg";
 
-const HeadTag = ({siteName, description="Simon George Kupisz's site", robotsTags="all", keywords=""}) => {
+interface HeadTagInterface{
+    siteName: string
+    description: string,
+    robotsTags: string
+    keywords: string
+}
+
+const AuthorImage = require("../assets/simonKupisz.jpg");
+
+const HeadTag:React.FC<HeadTagInterface> = ({siteName="Simon G. Kupisz site", description="Simon George Kupisz's site", robotsTags="all", keywords=""} : HeadTagInterface) => {
     return <Helmet>
         <title>{siteName}</title>
         <meta name="description" content={description}/>

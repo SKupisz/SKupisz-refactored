@@ -2,7 +2,7 @@ import React, {Suspense} from "react";
 import './App.css';
 
 const Main = React.lazy(() => {
-  return new Promise(resolve => setTimeout(resolve, 0.4*1000)).then(
+  return new Promise(resolve => setTimeout(resolve, 0.1*1000)).then(
     () => import("./components/main.jsx")
   );
 });

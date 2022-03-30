@@ -4,8 +4,8 @@ import { Canvas } from "@react-three/fiber";
 import { MainContainer } from "../../styled/main";
 import { SomethingWentWrongHeader, SomethingWentWrongDescribe,
     CanvasContainer } from "../../styled/somethingWentWrong";
-import Navbar from "../navbar.jsx";
-import HeadTag from "../headTag.jsx";
+import Navbar from "../navbar";
+import HeadTag from "../headTag";
 import Game from "./game_404.jsx";
 
 const SomethingWentWrong = () => {
