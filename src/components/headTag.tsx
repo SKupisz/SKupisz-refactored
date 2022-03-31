@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 interface HeadTagInterface{
     siteName: string
     description: string,
-    robotsTags: string
+    robotsTags?: string
     keywords: string
 }
 

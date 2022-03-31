@@ -13,31 +13,30 @@ import data from "../../data/general.js";
 import Navbar from "../navbar";
 import HeadTag from "../headTag";
 
+const Portfolio:React.FC = () => {
 
-const Portfolio = () => {
-
-    const [hiderController, setHiderController] = useState(100);
-    const [consoleLeftPos, setConsoleLeftPos] = useState(100);
-    const [currentInput, setCurrentInput] = useState("");
-    const [currentSizeMode, setCurrentSizeMode] = useState(0);
-    const [currentColor, setCurrentColor] = useState("green");
+    const [hiderController, setHiderController] = useState<number>(100);
+    const [consoleLeftPos, setConsoleLeftPos] = useState<number>(100);
+    const [currentInput, setCurrentInput] = useState<string>("");
+    const [currentSizeMode, setCurrentSizeMode] = useState<number>(0);
+    const [currentColor, setCurrentColor] = useState<string>("green");
     
-    let dynamicConsoleStyle = css({
+    let dynamicConsoleStyle:any = css({
         fontSize: currentSizeMode === 0 ? "0.7em" : currentSizeMode === 1 ? "1em" : "0.5em",
         color: currentColor
     });
 
-    const [currentConsoleList, setCurrentConsoleList] = useState([
+    const [currentConsoleList, setCurrentConsoleList] = useState<any[]>([
         "> Portfolio console...",
         "> Use the command input to know more about me...",
         "> For more informations type help..."
     ])
 
-    const contentRef = useRef();
+    const contentRef = useRef<HTMLElement>();
 
-    const additionalFlagError = (commandName, list) => list.push(`Error: the '${commandName}' command requires additional flag to be executed`)
+    const additionalFlagError = (commandName:string, list :any[]) : number => list.push(`Error: the '${commandName}' command requires additional flag to be executed`)
 
-    const handleTheConsoleInput = (keyCode) => {
+    const handleTheConsoleInput = (keyCode: number) : void => {
         if(keyCode === 13) { // enter key
             let commandOperand = currentInput.trim();
             let listOperand = [...currentConsoleList];
@@ -124,7 +123,8 @@ const Portfolio = () => {
     });
 
     useEffect(() => {
-        contentRef.current.scrollTop = contentRef.current.scrollHeight;
+        console.log(contentRef.current);
+        if(contentRef.current !== undefined) contentRef.current.scrollTop = contentRef.current.scrollHeight;
     },[currentConsoleList]);
 
     return <>

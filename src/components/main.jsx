@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Welcome from "./subsites/welcome.jsx";
 import Blog from "./subsites/blog.jsx";
-import Portfolio from "./subsites/portfolio.jsx";
+import Portfolio from "./subsites/portfolio";
 import Contact from "./subsites/contact.jsx";
 import SomethingWentWrong from "./subsites/somethingWentWrong.jsx";
 import RedirectElem from "./helpers/redirectManager.jsx";

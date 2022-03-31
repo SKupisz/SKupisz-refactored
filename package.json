@@ -15,6 +15,7 @@
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
     "@types/react-helmet": "^6.1.5",
+    "@types/react-html-parser": "^2.0.2",
     "@types/styled-components": "^5.1.24",
     "awesome-typescript-loader": "^5.2.1",
     "glamor": "^2.20.40",
